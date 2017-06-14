@@ -1,0 +1,20 @@
+body {
+	background: #39150C url("sunset.jpg") no-repeat fixed top center;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	color: #fff;
+}
+h1 h2 h4 p {
+	margin: auto;
+	text-align: center;
+}
+#title{
+	text-align: center;
+	font-size: 4em;
+}
+#addHere {
+	text-align: center;
+	font-size: 2em;
+}

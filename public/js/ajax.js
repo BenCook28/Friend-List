@@ -1,7 +1,9 @@
+//declare global variables
 var $friends = $('#friends');
 var $name = $('#name');
 var $age = $('#age');
 
+//template the entered data will fill
 var friendTemplate = "" +
 	"<li>" +
 	"<p><strong>Name:</strong> {{name}}</p>" +
@@ -9,10 +11,11 @@ var friendTemplate = "" +
 	"<button id='{{id}}' class='remove'>X</button>" +
 	"</li>";
 
+//grab the entered friend, render it into a form HTML understands, attach this variable to the HTML document
 function addFriend(friend){
 	$friends.append(Mustache.render(friendTemplate, friend));
 }
-
+//grab the html page, when it loads, jQuery pulls from the API if successful, otherwise alerts with an error message
 $(document).ready(function(){
 	$.ajax({
 		type: 'GET',
@@ -27,6 +30,7 @@ $(document).ready(function(){
 			alert('error loading friends');
 		}
 	});
+	//when someone clicks the Add! button, adds the object the user provides to the table array in the API, otherwise error message
 	$('#add-friend').on('click', function(){
 
 		var friend = {
@@ -43,11 +47,6 @@ $(document).ready(function(){
 			error: function(){
 				alert('error saving order');
 			}
-		// }).done(function(newFriend){
-		// 	console.log("hi");
-		// 	addFriend(newFriend);
-		// }).fail(function(){
-		// 	alert("error");
 		});
 	});
 	//.delegate allows you to remove items that were loaded by other students
