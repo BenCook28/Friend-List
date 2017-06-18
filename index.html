@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="icon" type="image/png" sizes="16x16" href="img/birds.png">
 	<title>My Friends</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="lib/assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="public/css/main.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 </head>
@@ -12,13 +14,14 @@
 	<ul id="friends">
 	</ul>
 	<div id="addHere">
-		<h4>Add a Friend</h4>
+		<h2>Add a Friend</h4>
 		<p>Name: <input type="text" id="name"></p>
 		<p>Age: <input type="text" id="age"></p>
-		<button id="add-friend">Add!</button>
+		<!-- <button id="add-friend">Add!</button> -->
+		<button type="button" class="btn btn-primary">Add</button>
 	</div>
 	<!-- js files -->
-	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript" src="public/js/ajax.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
 </body>
 </html>

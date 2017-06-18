@@ -6,13 +6,12 @@ var app     = express();
 var http	= require('http').Server(app);
 
 //static doesn't change the css and js files in the public folder
-app.use(express.static(__dirname + '/public'));
-
+app.use(express.static(__dirname + '/'));
 //the express module 
 app.get('/', function(req, res){
 	res.sendFile(__dirname + '/index.html');
 });
 
 http.listen(process.env.PORT || 3000, function(){
-	console.log('listening on *:3000');
+	console.log('listening on Port:3000');
 });
