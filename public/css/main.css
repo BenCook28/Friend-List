@@ -18,3 +18,6 @@ h1 h2 h4 p {
 	text-align: center;
 	font-size: 2em;
 }
+input{
+	color: black !important;
+}
