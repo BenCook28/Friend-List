@@ -19,7 +19,7 @@ function addFriend(friend){
 $(document).ready(function(){
 	$.ajax({
 		type: 'GET',
-		url: 'http://rest.learncode.academy/api/learncode/friends',
+		url: 'http://rest.learncode.academy/api/bencook28/friends',
 		success: function(friends) {
 			$.each(friends, function(i, friend){
 				addFriend(friend);
@@ -39,7 +39,7 @@ $(document).ready(function(){
 		};
 		$.ajax({
 			type: 'POST',
-			url: 'http://rest.learncode.academy/api/learncode/friends',
+			url: 'http://rest.learncode.academy/api/bencook28/friends',
 			data: friend,
 			success: function(newFriend){
 				addFriend(newFriend);
@@ -56,7 +56,7 @@ $(document).ready(function(){
 		//AJAX DELETE Function - click the .remove class button and the id identifies what to delete
 		$.ajax({
 			type: 'DELETE',
-			url: 'http://rest.learncode.academy/api/learncode/friends/' + $(this).attr('id'),
+			url: 'http://rest.learncode.academy/api/bencook28/friends/' + $(this).attr('id'),
 			success: function(){
 				$li.fadeOut(300, function(){
 					$(this).remove()
